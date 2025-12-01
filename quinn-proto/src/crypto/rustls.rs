@@ -290,7 +290,7 @@ pub struct HandshakeData {
 /// [root_certs]: crate::config::ClientConfig::with_root_certificates()
 /// [platform]: crate::config::ClientConfig::with_platform_verifier()
 pub struct QuicClientConfig {
-    pub(crate) inner: Arc<rustls::ClientConfig>,
+    pub inner: Arc<rustls::ClientConfig>,
     initial: Suite,
 }
 
@@ -439,7 +439,7 @@ impl std::error::Error for NoInitialCipherSuite {}
 ///
 /// [single]: crate::config::ServerConfig::with_single_cert()
 pub struct QuicServerConfig {
-    inner: Arc<rustls::ServerConfig>,
+    pub inner: Arc<rustls::ServerConfig>,
     initial: Suite,
 }
 

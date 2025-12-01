@@ -110,7 +110,7 @@ pub struct Keys {
 }
 
 /// Client-side configuration for the crypto protocol
-pub trait ClientConfig: Send + Sync {
+pub trait ClientConfig: Send + Sync + Any {
     /// Start a client session with this configuration
     fn start_session(
         self: Arc<Self>,
